@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LogInForm</class>
+ <widget class="QWidget" name="LogInForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>690</width>
+    <height>420</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ToDoList</string>
+  </property>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>0</y>
+     <width>371</width>
+     <height>420</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame {
+background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(72, 102, 152, 239), stop:1 rgba(255, 150, 255, 255));
+   border-radius: 15px;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLineEdit" name="passwordLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>190</y>
+      <width>271</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit
+ {
+    background-color : rgb(72, 72, 152);
+    color: white; 
+    padding: 10px 20px;
+    border: 2px solid rgb(72, 72, 50); 
+    border-radius: 10px;
+	font-family: Arial; 
+    font-size: 16px;
+	font-weight: bold
+}</string>
+    </property>
+    <property name="text">
+     <string>Password</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="logInPushButton">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>320</y>
+      <width>161</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color : rgb(72, 72, 152);
+    color: white; 
+    padding: 10px 20px;
+    border: 2px solid rgb(72, 72, 50); 
+    border-radius: 15px;
+	font-family: Arial; 
+    font-size: 16px;
+    text-align: center; 
+	font-weight: bold;
+	
+}
+
+QPushButton:hover {
+    background-color: rgb(45, 45, 95); 
+    border-color: rgb(45, 45, 95);
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>LOG IN</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="nameLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>100</y>
+      <width>271</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit
+ {
+    background-color : rgb(72, 72, 152);
+    color: white; 
+    padding: 10px 20px;
+    border: 2px solid rgb(72, 72, 50); 
+    border-radius: 10px;
+	font-family: Arial; 
+    font-size: 16px;
+	font-weight: bold
+}</string>
+    </property>
+    <property name="text">
+     <string>Name</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>0</y>
+     <width>321</width>
+     <height>420</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame {
+	background-color : rgb(72, 72, 152);
+	color: white;
+   border-radius: 15px;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="toDoListLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+	 font-family: Arial; /* Font family */
+    font-size: 24px; /* Font size */
+    font-weight: bold; /* Bold text */
+    color: white; /* Text color */
+    margin-bottom: 15px; /* Bottom margin */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>TO DO LIST</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="someInfoLabel">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>50</y>
+      <width>281</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+	font: ;
+	font: 900 11pt &quot;Segoe UI&quot;;
+    font-size: 13px;
+    text-align: center; 
+	font-weight: bold;
+}</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;A &amp;quot;To Do List&amp;quot; application is a common tool&lt;/p&gt;&lt;p&gt; used to deep track of tasks that need to be &lt;/p&gt;&lt;p&gt;completed. It typically allows users to add &lt;/p&gt;&lt;p&gt;new tasks, mark tasks as completed, and&lt;/p&gt;&lt;p&gt;remove tasks from the list.&lt;/p&gt;&lt;p&gt;Implementing a &amp;quot;To Do List&amp;quot; application &lt;/p&gt;&lt;p&gt;in Qtinvolves creating a user interface &lt;/p&gt;&lt;p&gt;with input fields&lt;/p&gt;&lt;p&gt;buttons, and a list to display tasks.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ifNotHaveAccountLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>360</y>
+      <width>181</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 350 italic 10pt &quot;Segoe UI Semilight&quot;;
+	 text-decoration: underline;
+}</string>
+    </property>
+    <property name="text">
+     <string>If you do not have account</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

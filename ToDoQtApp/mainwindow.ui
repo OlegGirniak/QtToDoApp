@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>934</width>
+    <height>494</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ToDoList</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPlainTextEdit" name="descriptionPlainTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>10</y>
+      <width>641</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Swis721 Blk BT</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPlainTextEdit {
+	background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(72, 102, 152, 239), stop:1 rgba(255, 		150, 255, 255));
+   border-radius: 15px;
+	color : white;
+ padding: 10px;
+}</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="taskHeaderPlainTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>260</y>
+      <width>281</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Swis721 Blk BT</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPlainTextEdit {
+	background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(72, 102, 152, 239), stop:1 rgba(255, 		150, 255, 255));
+   border-radius: 15px;
+	color : white;
+ padding: 10px;
+}</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="tasksListWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>281</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Swis721 Blk BT</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QListWidget {
+	background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(72, 102, 152, 239), stop:1 rgba(255, 		150, 255, 255));
+   border-radius: 15px;
+	color : white;
+ padding: 10px;
+}</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_3">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>320</y>
+      <width>641</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame {
+background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(72, 102, 152, 239), stop:1 rgba(255, 150, 255, 255));
+   border-radius: 15px;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="saveDescriptionButton">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>50</y>
+       <width>271</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color : rgb(72, 72, 152);
+    color: white; 
+    padding: 10px 20px;
+    border: 2px solid rgb(72, 72, 50); 
+    border-radius: 15px;
+	font-family: Arial; 
+    font-size: 16px;
+    text-align: center; 
+	font-weight: bold;
+	
+}
+
+QPushButton:hover {
+    background-color: rgb(45, 45, 95); 
+    border-color: rgb(45, 45, 95);
+}
+
+</string>
+     </property>
+     <property name="text">
+      <string>SAVE</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="clearDescriptionButton">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>50</y>
+       <width>281</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color : rgb(72, 72, 152);
+    color: white; 
+    padding: 10px 20px;
+    border: 2px solid rgb(72, 72, 50); 
+    border-radius: 15px;
+	font-family: Arial; 
+    font-size: 16px;
+    text-align: center; 
+	font-weight: bold;
+	
+}
+
+QPushButton:hover {
+    background-color: rgb(45, 45, 95); 
+    border-color: rgb(45, 45, 95);
+}
+
+</string>
+     </property>
+     <property name="text">
+      <string>CLEAR</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_5">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>320</y>
+      <width>281</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame {
+background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(72, 102, 152, 239), stop:1 rgba(255, 150, 255, 255));
+   border-radius: 15px;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="addTaskButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>261</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color : rgb(72, 72, 152);
+    color: white; 
+    padding: 10px 20px;
+    border: 2px solid rgb(72, 72, 50); 
+    border-radius: 15px;
+	font-family: Arial; 
+    font-size: 16px;
+    text-align: center; 
+	font-weight: bold;
+	
+}
+
+QPushButton:hover {
+    background-color: rgb(45, 45, 95); 
+    border-color: rgb(45, 45, 95);
+}
+
+</string>
+     </property>
+     <property name="text">
+      <string>ADD</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="removeTaskButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>261</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color : rgb(72, 72, 152);
+    color: white; 
+    padding: 10px 20px;
+    border: 2px solid rgb(72, 72, 50); 
+    border-radius: 15px;
+	font-family: Arial; 
+    font-size: 16px;
+    text-align: center; 
+	font-weight: bold;
+	
+}
+
+QPushButton:hover {
+    background-color: rgb(45, 45, 95); 
+    border-color: rgb(45, 45, 95);
+}
+
+</string>
+     </property>
+     <property name="text">
+      <string>REMOVE</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
