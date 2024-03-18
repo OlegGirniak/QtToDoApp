@@ -1,0 +1,48 @@
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.slo
+*.lo
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Qt-specific
+*.moc
+*.qmlc
+*.rcc
+*.qrc.cxx
+*.qrc.cpp
+*.qrc.o
+*.qrc.obj
+
+# Generated UI files
+ui_*.h
+
+# Generated moc files
+moc_*.cpp
+
+# Generated qrc files
+qrc_*.cpp
+
+# Include build directory
+build*/
+
+# Ignore Qt Creator files
+*.user
+*.autosave
+
+# Ignore .qmake.stash file
+.qmake.stash
+
+# Ignore generated Makefiles
+Makefile
+
+/build/
