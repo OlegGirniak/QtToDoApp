@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -12,12 +12,18 @@ SOURCES += \
     loginform.cpp \
     main.cpp \
     mainwindow.cpp \
-    signupform.cpp
+    signupform.cpp \
+    sqlservice.cpp \
+    task.cpp \
+    user.cpp
 
 HEADERS += \
     loginform.h \
     mainwindow.h \
-    signupform.h
+    signupform.h \
+    sqlservice.h \
+    task.h \
+    user.h
 
 FORMS += \
     loginform.ui \
