@@ -12,12 +12,18 @@ class User
     QList<Task> tasks;
 
 public:
+    User();
     User(unsigned int _id, QString _name, QString _password, QList<Task> _tasks);
 
     unsigned int GetId() const;
     QString GetName() const;
     QString GetPassword() const;
     QList<Task> GetTasks() const;
+
+    void SetId(unsigned int _id);
+    void SetName(QString _name);
+    void SetPassword(QString _password);
+    void SetTasks(QList<Task> _tasks);
 
     void AddTask(const Task& _task);
     void DeleteTask(QString _taskHeader);

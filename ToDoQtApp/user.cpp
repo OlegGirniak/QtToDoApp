@@ -2,6 +2,10 @@
 #include <QException>
 
 
+User::User()
+    : id(0), name("None"), password("None")
+{ }
+
 User::User(unsigned int _id, QString _name, QString _password, QList<Task> _tasks)
     : id(_id), name(_name), password(_password), tasks(_tasks)
 { }
@@ -22,11 +26,24 @@ QList<Task> User::GetTasks() const {
     return tasks;
 }
 
-void User::AddTask(const Task& _task) {
-    //if (!tasks.contains(_task))
-       // tasks.append(_task);
-   // else
-//throw QException();
+void User::SetId(unsigned int _id)
+{
+    id = _id;
+}
+
+void User::SetName(QString _name)
+{
+    name = _name;
+}
+
+void User::SetPassword(QString _password)
+{
+    password = _password;
+}
+
+void User::SetTasks(QList<Task> _tasks)
+{
+    tasks = _tasks;
 }
 
 void User::DeleteTask(QString _taskHeader) { // may be bug

@@ -22,6 +22,7 @@ HEADERS += \
     mainwindow.h \
     signupform.h \
     sqlservice.h \
+    stringhasher.h \
     task.h \
     user.h
 

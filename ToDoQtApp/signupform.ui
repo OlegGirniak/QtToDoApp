@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>392</width>
-    <height>433</height>
+    <height>429</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,10 +22,10 @@
   <widget class="QFrame" name="frame">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>371</width>
-     <height>411</height>
+     <x>50</x>
+     <y>40</y>
+     <width>291</width>
+     <height>341</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -43,10 +43,10 @@ background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(72, 1
    <widget class="QPushButton" name="logInPushButton">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>320</y>
-      <width>161</width>
-      <height>51</height>
+      <x>60</x>
+      <y>270</y>
+      <width>171</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="cursor">
@@ -80,8 +80,8 @@ QPushButton:hover {
    <widget class="QLineEdit" name="nameLineEdit">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>70</y>
+      <x>10</x>
+      <y>40</y>
       <width>271</width>
       <height>41</height>
      </rect>
@@ -89,7 +89,7 @@ QPushButton:hover {
     <property name="styleSheet">
      <string notr="true">QLineEdit
  {
-    background-color : rgb(72, 72, 152);
+    background-color : rgb(72, 50, 140);
     color: white; 
     padding: 10px 20px;
     border: 2px solid rgb(72, 72, 50); 
@@ -109,8 +109,8 @@ QPushButton:hover {
    <widget class="QLineEdit" name="passwordLineEdit">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>160</y>
+      <x>10</x>
+      <y>120</y>
       <width>271</width>
       <height>41</height>
      </rect>
@@ -118,7 +118,7 @@ QPushButton:hover {
     <property name="styleSheet">
      <string notr="true">QLineEdit
  {
-    background-color : rgb(72, 72, 152);
+    background-color : rgb(72, 50, 140);
     color: white; 
     padding: 10px 20px;
     border: 2px solid rgb(72, 72, 50); 
@@ -141,8 +141,8 @@ QPushButton:hover {
    <widget class="QLineEdit" name="passwordAgainLineEdit">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>230</y>
+      <x>10</x>
+      <y>180</y>
       <width>271</width>
       <height>41</height>
      </rect>
@@ -150,7 +150,7 @@ QPushButton:hover {
     <property name="styleSheet">
      <string notr="true">QLineEdit
  {
-    background-color : rgb(72, 72, 152);
+    background-color : rgb(72, 50, 140);
     color: white; 
     padding: 10px 20px;
     border: 2px solid rgb(72, 72, 50); 

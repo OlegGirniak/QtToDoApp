@@ -19,13 +19,17 @@ public:
     static void AddUser(QString name, QString password);
 
     static void AddTask(User currentUser, Task task);
+
     static void DeleteTask(User currentUser, Task task);
 
-    static void GetUser(QString userName,QString userPassword);
+    static User GetUser(QString userName,QString userPassword);
 
-private:
-    static bool CheckUserExists(QString userName,QString userPassword);
+    static void GetUserTasks(User& user);
+
+    static bool CheckUserExists(QString userName);
+
     static bool CheckTaskExists(QString taskHeader);
+
 };
 
 #endif // SQLSERVICE_H
