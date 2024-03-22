@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QListWidget>
 #include "user.h"
 
 
@@ -20,10 +21,16 @@ public:
     MainWindow(User _user, QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_tasksListWidget_itemPressed(QListWidgetItem *item);
+
+    void on_saveDescriptionButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 
 private:
     User user;
+    QListWidgetItem *selectedTask;
 };
 #endif // MAINWINDOW_H

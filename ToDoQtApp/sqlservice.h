@@ -20,6 +20,8 @@ public:
 
     static void AddTask(User currentUser, Task task);
 
+    static void UpdateTask(QString header, QString description);
+
     static void DeleteTask(User currentUser, Task task);
 
     static User GetUser(QString userName,QString userPassword);

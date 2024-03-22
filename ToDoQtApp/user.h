@@ -18,7 +18,7 @@ public:
     unsigned int GetId() const;
     QString GetName() const;
     QString GetPassword() const;
-    QList<Task> GetTasks() const;
+    QList<Task>& GetTasks();
 
     void SetId(unsigned int _id);
     void SetName(QString _name);

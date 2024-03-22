@@ -34,6 +34,28 @@ void SqlService::AddUser(QString name, QString password)
     qDebug() << "User added successfully";
 }
 
+void SqlService::UpdateTask(QString header, QString description)
+{
+    if (!dataBase.isOpen())
+    {
+        qDebug() << "Database is not open!";
+        return;
+    }
+
+    QSqlQuery query;
+    query.prepare("UPDATE tasks SET description = :description WHERE header = :header");
+    query.bindValue(":description", description);
+    query.bindValue(":header", header);
+
+    if (!query.exec())
+    {
+        qDebug() << "Error executing query:" << query.lastError().text();
+        return;
+    }
+
+    qDebug() << "Task updated successfully";
+}
+
 User SqlService::GetUser(QString userName, QString userPassword)
 {
     User user;

@@ -22,7 +22,7 @@ QString User::GetPassword() const {
     return password;
 }
 
-QList<Task> User::GetTasks() const {
+QList<Task>& User::GetTasks() {
     return tasks;
 }
 
