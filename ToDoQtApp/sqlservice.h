@@ -22,7 +22,7 @@ public:
 
     static void UpdateTask(QString header, QString description);
 
-    static void DeleteTask(User currentUser, Task task);
+    static void DeleteTask(int currentUserId, QString taskHeader);
 
     static User GetUser(QString userName,QString userPassword);
 
@@ -31,6 +31,8 @@ public:
     static bool CheckUserExists(QString userName);
 
     static bool CheckTaskExists(QString taskHeader);
+
+    static int GetTaskIdByHeader(QString header);
 
 };
 

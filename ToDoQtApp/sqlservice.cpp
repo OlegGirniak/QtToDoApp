@@ -34,6 +34,44 @@ void SqlService::AddUser(QString name, QString password)
     qDebug() << "User added successfully";
 }
 
+void SqlService::AddTask(User currentUser, Task task)
+{
+    if (!dataBase.isOpen())
+    {
+        qDebug() << "Database is not open!";
+        return;
+    }
+
+    // Додаємо нове завдання до таблиці tasks
+    QSqlQuery taskQuery;
+    taskQuery.prepare("INSERT INTO tasks (header, description) VALUES (:header, :description)");
+    taskQuery.bindValue(":header", task.GetHeader());
+    taskQuery.bindValue(":description", task.GetDescription());
+
+    if (!taskQuery.exec())
+    {
+        qDebug() << "Error executing query:" << taskQuery.lastError().text();
+        return;
+    }
+
+    // Отримуємо ідентифікатор доданого завдання
+    int taskId = taskQuery.lastInsertId().toInt();
+
+    // Вставляємо запис до таблиці users_tasks
+    QSqlQuery userTaskQuery;
+    userTaskQuery.prepare("INSERT INTO users_tasks (id_user, id_task) VALUES (:userId, :taskId)");
+    userTaskQuery.bindValue(":userId", currentUser.GetId());
+    userTaskQuery.bindValue(":taskId", taskId);
+
+    if (!userTaskQuery.exec())
+    {
+        qDebug() << "Error executing query:" << userTaskQuery.lastError().text();
+        return;
+    }
+
+    qDebug() << "Task added successfully";
+}
+
 void SqlService::UpdateTask(QString header, QString description)
 {
     if (!dataBase.isOpen())
@@ -55,6 +93,39 @@ void SqlService::UpdateTask(QString header, QString description)
 
     qDebug() << "Task updated successfully";
 }
+
+void SqlService::DeleteTask(int currentUserId, QString taskHeader)
+{
+    int taskId = SqlService::GetTaskIdByHeader(taskHeader);
+    if(taskId != -1){
+
+        QSqlQuery userTaskQuery;
+        userTaskQuery.prepare("DELETE FROM users_tasks WHERE id_task = :taskId");
+        userTaskQuery.bindValue(":taskId", taskId);
+
+        qDebug() << userTaskQuery.executedQuery();
+
+        if (!userTaskQuery.exec())
+        {
+            qDebug() << "Error executing query:" << userTaskQuery.lastError().text();
+            return;
+        }
+
+        // Видалення запису з таблиці tasks
+        QSqlQuery taskQuery;
+        taskQuery.prepare("DELETE FROM tasks WHERE id = :taskId");
+        taskQuery.bindValue(":taskId", taskId);
+
+        if (!taskQuery.exec())
+        {
+            qDebug() << "Error executing query:" << taskQuery.lastError().text();
+            return;
+        }
+
+        qDebug() << "Task deleted successfully";
+    }
+}
+
 
 User SqlService::GetUser(QString userName, QString userPassword)
 {
@@ -153,4 +224,31 @@ bool SqlService::CheckUserExists(QString userName)
 
     query.next();
     return query.value(0).toInt() > 0;
+}
+
+int SqlService::GetTaskIdByHeader(QString header)
+{
+    if (!dataBase.isOpen())
+    {
+        qDebug() << "Database is not open!";
+        return -1;
+    }
+
+    QSqlQuery query;
+    query.prepare("SELECT id FROM tasks WHERE header = :header");
+    query.bindValue(":header", header);
+
+    if (!query.exec())
+    {
+        qDebug() << "Error executing query:" << query.lastError().text();
+        return -1;
+    }
+
+    if (query.next())
+    {
+        auto result = query.value(0).toInt();
+        return result;
+    }
+
+    return -1;
 }

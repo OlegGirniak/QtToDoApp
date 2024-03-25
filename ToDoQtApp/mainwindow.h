@@ -26,6 +26,10 @@ private slots:
 
     void on_saveDescriptionButton_clicked();
 
+    void on_removeTaskButton_clicked();
+
+    void on_addTaskButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 
